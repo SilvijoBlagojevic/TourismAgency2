@@ -1,0 +1,94 @@
+﻿@model IEnumerable<TourismAgency2.Models.Offer>
+
+@{
+    ViewBag.Title = "All Offers";
+}
+
+<h2>All Offfers</h2>
+
+
+@foreach (var p in Model)
+{
+   @Html.Partial("OfferSummary", p)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OfferName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfferName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destination)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.OfferId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.OfferId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.OfferId })
+            </td>
+        </tr>
+    }
+
+    </table>
+    
+    *@
