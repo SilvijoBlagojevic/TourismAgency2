@@ -21,5 +21,12 @@ namespace TourismAgency2.Controllers
         //    IEnumerable <Offer> summerOffers = db.Offers.Where(x )
         //    return View("List", db.Offers.de)
         //} 
+
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

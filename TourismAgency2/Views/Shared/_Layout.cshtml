@@ -29,28 +29,34 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Tourism Agency", "List", "Offer", new { area = "" }, new { @class = "navbar-brand" })
-                <h4>There are still lot to do here...</h4>
+                @Html.ActionLink(" Travel Agency ", "List", "Offer", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     @*<li>@Html.ActionLink("Offers list ", "List", "Offer")</li>*@
                     <li>@Html.Action("Summary", "Cart")</li>
                 </ul>
+                <ul class="nav navbar-nav navbar-left">
+                    <li>@Html.ActionLink("Admin panel", "Index", "Admin")</li>
+                </ul>
                 @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>
-    <div class="row panel">
-        <div id="categories" class="col-xs-3">
-            @*@Html.Action("Menu", "Nav")*@
-        </div>
-        <div class="col-xs-8">
+    <div class="container">
+        @*<div id="categories" class="col-xs-3">
+                @Html.Action("Menu", "Nav")
+            </div>*@
+        @if (TempData["message"] != null)
+        {
+            <div class="alert alert-success">@TempData["message"]</div>
+        }
             @RenderBody()
-        </div>
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

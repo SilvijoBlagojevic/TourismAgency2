@@ -13,11 +13,7 @@ namespace TourismAgency2.Models
 
         public virtual ICollection<Offer> Offers { get; set; }
 
-        // **to do*********************************
-        // public DateTime ValidUntil { get; set; }
-        // public DateTime ValidFrom { get; set; }
-        // public int NumberAvailable { get; set; }
-        // public int NumberInStock { get; set; }
+        
 
     }
 }

@@ -197,11 +197,32 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OfferController.cs" />
-    <Compile Include="Controllers\CustomerDetails.cs" />
+    <Compile Include="Migrations\201705041331327_AddingOfferModelAnnotation.cs" />
+    <Compile Include="Migrations\201705041331327_AddingOfferModelAnnotation.Designer.cs">
+      <DependentUpon>201705041331327_AddingOfferModelAnnotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705041605379_AddingOfferModelAnnotation2.cs" />
+    <Compile Include="Migrations\201705041605379_AddingOfferModelAnnotation2.Designer.cs">
+      <DependentUpon>201705041605379_AddingOfferModelAnnotation2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705042055588_AddingOfferModelAnnotation3.cs" />
+    <Compile Include="Migrations\201705042055588_AddingOfferModelAnnotation3.Designer.cs">
+      <DependentUpon>201705042055588_AddingOfferModelAnnotation3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705050709451_AddingOfferModelAnnotation4.cs" />
+    <Compile Include="Migrations\201705050709451_AddingOfferModelAnnotation4.Designer.cs">
+      <DependentUpon>201705050709451_AddingOfferModelAnnotation4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705050710337_AddingOfferModelAnnotation5.cs" />
+    <Compile Include="Migrations\201705050710337_AddingOfferModelAnnotation5.Designer.cs">
+      <DependentUpon>201705050710337_AddingOfferModelAnnotation5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerDetails.cs" />
     <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\IOrderProcessor.cs" />
     <Compile Include="Global.asax.cs">
@@ -302,6 +323,8 @@
     <Content Include="Views\Cart\Checkout.cshtml" />
     <Content Include="Views\Nav\Menu.cshtml" />
     <Content Include="Views\Cart\Completed.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Save.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -329,6 +352,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705031207488_AddingSeasonInOffer.resx">
       <DependentUpon>201705031207488_AddingSeasonInOffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705041331327_AddingOfferModelAnnotation.resx">
+      <DependentUpon>201705041331327_AddingOfferModelAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705041605379_AddingOfferModelAnnotation2.resx">
+      <DependentUpon>201705041605379_AddingOfferModelAnnotation2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705042055588_AddingOfferModelAnnotation3.resx">
+      <DependentUpon>201705042055588_AddingOfferModelAnnotation3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050709451_AddingOfferModelAnnotation4.resx">
+      <DependentUpon>201705050709451_AddingOfferModelAnnotation4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050710337_AddingOfferModelAnnotation5.resx">
+      <DependentUpon>201705050710337_AddingOfferModelAnnotation5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

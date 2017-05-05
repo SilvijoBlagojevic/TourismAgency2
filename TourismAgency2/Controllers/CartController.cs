@@ -30,7 +30,7 @@ namespace TourismAgency2.Controllers
             return RedirectToAction("Index", new { returnUrl });
         }
 
-        public PartialViewResult Summary(TourismAgency2.Entities.Cart cart)
+        public PartialViewResult Summary(Cart cart)
         {
             cart = GetCart();
 
@@ -66,6 +66,21 @@ namespace TourismAgency2.Controllers
 
         }
 
+        public ActionResult RemoveFromCart (Cart cart, int offerId, string returnUrl)
+        {
+            cart = GetCart();
+
+            Offer _offer = db.Offers.FirstOrDefault(x => x.OfferId == offerId);
+
+            if (_offer != null)
+            {
+                cart.RemoveLine(_offer);
+            }
+
+
+            return RedirectToAction("Index", new { returnUrl });
+        }
+
         private Cart GetCart()
         {
             Cart cart = (Cart)Session["Cart"];
@@ -75,6 +90,13 @@ namespace TourismAgency2.Controllers
                 Session["Cart"] = cart;
             }
             return cart;
+        }
+
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

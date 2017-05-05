@@ -26,6 +26,15 @@
                 <td class="text-right">
                     @((line.Quantity * line.Offer.Price).ToString("c"))
                 </td>
+                <td>
+                    @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                    {
+                        @Html.ValidationSummary();
+                        @Html.Hidden("offerId", line.Offer.OfferId)
+                        @Html.HiddenFor(x => x.ReturnUrl)
+                        <input class="btn btn-sm btn-warning" type="submit" value="Remove"  />
+                    }
+                </td>
             </tr>
         }
     </tbody>

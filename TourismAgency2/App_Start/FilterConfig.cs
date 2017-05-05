@@ -8,6 +8,7 @@ namespace TourismAgency2
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+
         }
     }
 }
