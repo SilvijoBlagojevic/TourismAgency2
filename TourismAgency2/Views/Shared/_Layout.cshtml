@@ -23,23 +23,39 @@
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
+           <div class="navbar-header"> 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink(" Travel Agency ", "List", "Offer", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
+
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    @*<li>@Html.ActionLink("Offers list ", "List", "Offer")</li>*@
-                    <li>@Html.Action("Summary", "Cart")</li>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Admin panel", "Index", "Admin", new { area = "" }, new { @class = "navbar-brand" })</li>
                 </ul>
-                <ul class="nav navbar-nav navbar-left">
-                    <li>@Html.ActionLink("Admin panel", "Index", "Admin")</li>
+                <ul class="nav navbar-nav">
+                    @Html.ActionLink("All Offers", "List", "Offer", new { area = "" }, new { @class = "navbar-brand" })
                 </ul>
-                @*@Html.Partial("_LoginPartial")*@
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Summer Offers", "List", "Offer", new { sortSeasons = "summer" }, new { @class = "navbar-brand" })</li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Autumn Offers", "List", "Offer", new { sortSeasons = "autumn" }, new { @class = "navbar-brand" })</li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Winter Offers", "List", "Offer", new { sortSeasons = "winter" }, new { @class = "navbar-brand" })</li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Spring Offers", "List", "Offer", new { sortSeasons = "spring" }, new { @class = "navbar-brand" })</li>
+                </ul>
+                <ul class="nav navbar-nav">
+                        <li>@Html.Action("Summary", "Cart")</li>
+                </ul>
+
+                        @*@Html.Partial("_LoginPartial")*@
+
+</div>
             </div>
         </div>
     </div>
@@ -52,7 +68,9 @@
             <div class="alert alert-success">@TempData["message"]</div>
         }
             @RenderBody()
-
+        <h3>
+            <a href="https://github.com/SilvijoBlagojevic/TourismAgency2">Link to GitHub</a>
+        </h3>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

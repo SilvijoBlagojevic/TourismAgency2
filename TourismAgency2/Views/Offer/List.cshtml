@@ -1,16 +1,26 @@
 ﻿@model IEnumerable<TourismAgency2.Models.Offer>
 
 @{
-    ViewBag.Title = "All Offers";
+    ViewBag.Title = "Offers";
 }
 
-<h2>All Offfers</h2>
+<h2> @ViewBag.Seasons</h2>
 
-
-@foreach (var p in Model)
+@using (Html.BeginForm("List", "Offer"))
 {
-   @Html.Partial("OfferSummary", p)
+
+    <div class="form-inline">
+        <label class="control-label">Find by Destination: </label>
+        @Html.TextBox("searchString", "" , new { @class = "form-control" })
+        <button class="btn btn-default" type="submit">Search</button>
+    </div>
 }
+</br>
+
+ @foreach (var p in Model)
+    {
+        @Html.Partial("OfferSummary", p)
+    }
 
 
 
@@ -90,5 +100,5 @@
     }
 
     </table>
-    
-    *@
+
+*@
